@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Little Lucca Menu</title>
+</head>
+<body>
+    <a href="#main" id="skip">Skip to main content.</a>
+    <div class="logo">
+        <a href = "index.html" aria-label="home page for Little Lucca's">
+            <img src="/images/LittleLuccaLogo.png" alt="Little Lucca's Logo">
+        </a>
+    </div>
+    <nav class="nav">
+        <div class="nav-icon">
+            <a href="index.html" aria-label="home page for Little Lucca's">
+                <img src="/images/HomeIcon.png" alt="Home">
+                <h3>Home</h3>
+            </a>
+        </div>
+        <div class="nav-icon">
+            <a href="menu.html" aria-label="menu page for Little Lucca's">
+                <img src="/images/MenuIcon.png" alt="Sandwich">
+                <h3>Menu</h3>
+            </a>
+        </div>
+    </nav>
+
+    <div id="main">
+      <input type="button" name="add-sandwich" value="Add Sandwich" id="add-sandwich" class="button">
+      <div id="sandwich-form">
+        <form action="/add-sandwich/" method="post" class="add-sandwich-form" enctype="multipart/form-data">
+          <label for="name" class="container">Name: 
+            <input type="text" id="name" name="name" required/>
+          </label>
+          <label for="item" class="container">Item:
+            <input type="text" id="item" name="item" required/>
+          </label>
+          <label for="bread-list" class="container">
+            <input list="bread" id="bread-list" name="bread" placeholder="Select a bread" required/>
+          </label>
+          <datalist id="bread">
+              <option value="Sourdough">
+              <option value="Sweet">
+              <option value="Wheat">
+              <option value="Dutch Crunch">
+              <option value="Ciabatta">
+              <option value="Rye">
+              <option value="White">
+          </datalist>
+          <label for="cheese-list" class="container">
+            <input list="cheese" id="cheese-list" name="cheese" placeholder="Select a cheese" required/>
+          </label>
+          
+          <datalist id="cheese">
+            <option value="No Cheese">
+            <option value="Swiss">
+            <option value="American">
+            <option value="Jack">
+            <option value="Pepper Jack">
+            <option value="Provolone">
+            <option value="Cheddar">
+            <option value="Havarti">
+            <option value="Mozzarella">
+            <option value="White Cheddar">
+          </datalist>
+          <label for="condiments" class="container">Condiments: 
+          <div id="condiments">
+            
+            <label for="mayo" class="container condiment">Mayo
+              <input type="checkbox" id="mayo" name="mayo" value="Mayo"/>
+              <span class="checkmark"></span>
+            </label>
+            
+            <label for="mustard" class="container condiment">Mustard
+              <input type="checkbox" id="mustard" name="mustard" value="Mustard"/>
+              <span class="checkmark"></span>
+            </label>
+            
+            <label for="pickle" class="container condiment">Pickle
+              <input type="checkbox" id="pickle" name="pickle" value="Pickle"/>
+              <span class="checkmark"></span>
+            </label>
+            
+            <label for="onion" class="container condiment">Onion
+              <input type="checkbox" id="onion" name="onion" value="Onion"/>
+              <span class="checkmark"></span>
+            </label>
+            
+            <label for="lettuce" class="container condiment">Lettuce
+              <input type="checkbox" id="lettuce" name="lettuce" value="Lettuce"/>
+              <span class="checkmark"></span>
+            </label>
+            
+            <label for="tomato" class="container condiment">Tomato
+              <input type="checkbox" id="tomato" name="tomato" value="Tomato"/>
+              <span class="checkmark"></span>
+            </label>
+            
+            <label for="hot-sauce" class="container condiment">Hot Sauce
+              <input type="checkbox" id="hot-sauce" name="hot-sauce" value="Hot Sauce"/>
+              <span class="checkmark"></span>
+            </label>
+            
+            <label for="garlic-sauce" class="container condiment">Garlic Sauce
+              <input type="checkbox" id="garlic-sauce" name="garlic-sauce" value="Garlic Sauce"/>
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          </label>
+          <label for="misc" class="container">Misc or Notes: </label>
+          <textarea id="misc" name="misc">
+          </textarea>
+
+          <input type="submit" id="submit" name="submit" value="Add to Bag"/>
+        </form>
+      </div>
+    </div>
+    <script src="js/menu.js"></script>
+</body>
+</html>

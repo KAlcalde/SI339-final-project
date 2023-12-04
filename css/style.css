@@ -1,0 +1,201 @@
+body{
+    background-color: white;
+    color: black;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#skip{
+    position: absolute;
+    left: -300px;
+}
+
+#skip:focus{    
+    position: absolute;
+    left: 0px;  
+    top: 0px;
+    z-index: 11;
+    padding: 2px;
+    border: 1px solid black;
+}
+
+.logo img{
+    display: block;
+    margin: auto;
+}
+
+.nav{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 5px;
+    justify-content: center;
+}
+
+.nav-icon{
+    display: block;
+    margin: auto;
+    max-width: 200px;
+}
+
+.nav-icon h3{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-icon h3:hover, .nav-icon h3:focus{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(228, 21, 21);
+}
+
+#main{
+    display: block;
+    align-content: center;
+    margin: auto;
+    margin-left: 32%;
+}
+
+#main h2{
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#main p{
+    font-size: 16px;
+    /* line-height: 1.6; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#main a{
+    color: green;
+    text-decoration: underline;
+}
+
+#main a:hover, #main a:focus{
+    color: rgb(228, 21, 21);
+}
+
+/* Menu Page */
+.button{
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button:hover, .button:focus{
+    background-color: rgb(228, 21, 21);
+}
+
+#hide-sandwich{
+    display: none;
+}
+
+#sandwich-form{
+    display: none;
+}
+
+#name, #item{
+    background-color: #e4e0e0;
+}
+
+#condiments{
+    display:block;
+    margin:auto;
+}
+
+/* Customize the label (the container) */
+.container {
+    display: block;
+    position: relative;
+    /* padding-left: 35px; */
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.condiment{
+    margin-left: 25px;
+    padding-left: 30px;
+}
+
+#misc{
+    border: solid black 2px;
+    padding: 3px;
+    font-size: 20px;
+    width: 400px;
+    height: 100px;
+}
+
+#submit{
+    display: block;
+    border: solid black 2px;
+    padding: 5px;
+    width: 125px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+#submit:hover, #submit:focus{
+    background-color: rgb(26, 188, 26);
+}
